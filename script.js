@@ -275,7 +275,7 @@ function addZoomEvents(unicodeSize) {
 
 	glyphOutput.addEventListener('click', function (e) {
 		const target = e.target.closest('div[data-hex]');
-		if (target) {
+		if (target && zoomEnabled) {
 			showZoomWindow(unicodeSize);
 			updateZoomWindowContent(target, unicodeSize);
 		}
